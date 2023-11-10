@@ -1,0 +1,23 @@
+{
+  "unversionedId": "API Integration/2examples",
+  "id": "API Integration/2examples",
+  "title": "Examples of Integrating kick.com-api",
+  "description": "Node.js Integration",
+  "source": "@site/docs/API Integration/2examples.md",
+  "sourceDirName": "API Integration",
+  "slug": "/API Integration/2examples",
+  "permalink": "/docs/API Integration/2examples",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction to kick.com-api",
+    "permalink": "/docs/API Integration/1intro"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/CLI Usage/intro"
+  }
+}

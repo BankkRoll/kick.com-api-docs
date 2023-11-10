@@ -1,0 +1,26 @@
+{
+  "unversionedId": "API Integration/create-a-blog-post",
+  "id": "API Integration/create-a-blog-post",
+  "title": "Create a Blog Post",
+  "description": "Docusaurus creates a page for each blog post, but also a blog index page, a tag system, an RSS feed...",
+  "source": "@site/docs/API Integration/create-a-blog-post.md",
+  "sourceDirName": "API Integration",
+  "slug": "/API Integration/create-a-blog-post",
+  "permalink": "/docs/API Integration/create-a-blog-post",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "kick.com-api Introduction",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Markdown Features",
+    "permalink": "/docs/API Integration/markdown-features"
+  }
+}

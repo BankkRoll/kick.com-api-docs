@@ -1,0 +1,80 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "link",
+        "label": "kick.com-api Introduction",
+        "href": "/docs/intro",
+        "docId": "intro"
+      },
+      {
+        "type": "category",
+        "label": "API Integration",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Introduction to kick.com-api",
+            "href": "/docs/API Integration/1intro",
+            "docId": "API Integration/1intro"
+          },
+          {
+            "type": "link",
+            "label": "Examples of Integrating kick.com-api",
+            "href": "/docs/API Integration/2examples",
+            "docId": "API Integration/2examples"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "CLI Usage",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Introduction",
+            "href": "/docs/CLI Usage/intro",
+            "docId": "CLI Usage/intro"
+          }
+        ]
+      }
+    ]
+  },
+  "docs": {
+    "API Integration/1intro": {
+      "id": "API Integration/1intro",
+      "title": "Introduction to kick.com-api",
+      "description": "kick.com-api is a Node.js module that leverages Puppeteer to fetch channel data from Kick's API efficiently. This documentation outlines the advanced aspects of the KickApiWrapper class, highlighting its capabilities and flexible usage in various scenarios.",
+      "sidebar": "tutorialSidebar"
+    },
+    "API Integration/2examples": {
+      "id": "API Integration/2examples",
+      "title": "Examples of Integrating kick.com-api",
+      "description": "Node.js Integration",
+      "sidebar": "tutorialSidebar"
+    },
+    "CLI Usage/intro": {
+      "id": "CLI Usage/intro",
+      "title": "Introduction",
+      "description": "The kick-fetch CLI tool provides a robust command-line interface for fetching data from the kick.com API, offering versatility in data retrieval, output formatting, and customization.",
+      "sidebar": "tutorialSidebar"
+    },
+    "intro": {
+      "id": "intro",
+      "title": "kick.com-api Introduction",
+      "description": "Welcome to the introductory guide for kick.com-api. This Node.js module offers a straightforward way to access streaming channel data from Kick's API. Designed for versatility, it can be integrated into your Node.js applications or used directly via the command line.",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

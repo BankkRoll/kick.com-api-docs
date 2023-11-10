@@ -1,0 +1,531 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "C:\\Users\\calvi\\Downloads\\kick-auth\\my-website\\sidebars.js",
+          "contentPath": "C:\\Users\\calvi\\Downloads\\kick-auth\\my-website\\docs",
+          "contentPathLocalized": "C:\\Users\\calvi\\Downloads\\kick-auth\\my-website\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "docs": [
+            {
+              "unversionedId": "API Integration/1intro",
+              "id": "API Integration/1intro",
+              "title": "Introduction to kick.com-api",
+              "description": "kick.com-api is a Node.js module that leverages Puppeteer to fetch channel data from Kick's API efficiently. This documentation outlines the advanced aspects of the KickApiWrapper class, highlighting its capabilities and flexible usage in various scenarios.",
+              "source": "@site/docs/API Integration/1intro.mdx",
+              "sourceDirName": "API Integration",
+              "slug": "/API Integration/1intro",
+              "permalink": "/docs/API Integration/1intro",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "kick.com-api Introduction",
+                "permalink": "/docs/intro"
+              },
+              "next": {
+                "title": "Examples of Integrating kick.com-api",
+                "permalink": "/docs/API Integration/2examples"
+              }
+            },
+            {
+              "unversionedId": "API Integration/2examples",
+              "id": "API Integration/2examples",
+              "title": "Examples of Integrating kick.com-api",
+              "description": "Node.js Integration",
+              "source": "@site/docs/API Integration/2examples.md",
+              "sourceDirName": "API Integration",
+              "slug": "/API Integration/2examples",
+              "permalink": "/docs/API Integration/2examples",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Introduction to kick.com-api",
+                "permalink": "/docs/API Integration/1intro"
+              },
+              "next": {
+                "title": "Introduction",
+                "permalink": "/docs/CLI Usage/intro"
+              }
+            },
+            {
+              "unversionedId": "CLI Usage/intro",
+              "id": "CLI Usage/intro",
+              "title": "Introduction",
+              "description": "The kick-fetch CLI tool provides a robust command-line interface for fetching data from the kick.com API, offering versatility in data retrieval, output formatting, and customization.",
+              "source": "@site/docs/CLI Usage/intro.mdx",
+              "sourceDirName": "CLI Usage",
+              "slug": "/CLI Usage/intro",
+              "permalink": "/docs/CLI Usage/intro",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Examples of Integrating kick.com-api",
+                "permalink": "/docs/API Integration/2examples"
+              }
+            },
+            {
+              "unversionedId": "intro",
+              "id": "intro",
+              "title": "kick.com-api Introduction",
+              "description": "Welcome to the introductory guide for kick.com-api. This Node.js module offers a straightforward way to access streaming channel data from Kick's API. Designed for versatility, it can be integrated into your Node.js applications or used directly via the command line.",
+              "source": "@site/docs/intro.md",
+              "sourceDirName": ".",
+              "slug": "/intro",
+              "permalink": "/docs/intro",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Introduction to kick.com-api",
+                "permalink": "/docs/API Integration/1intro"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "doc",
+                "id": "intro"
+              },
+              {
+                "type": "category",
+                "label": "API Integration",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "API Integration/1intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "API Integration/2examples"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "CLI Usage",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "CLI Usage/intro"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": "/blog/tags",
+      "blogTagsPaginated": []
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-plugin-openapi": {
+    "default": {
+      "loadedApi": [
+        {
+          "type": "api",
+          "id": "list-all-pets",
+          "unversionedId": "list-all-pets",
+          "title": "List all pets",
+          "description": "",
+          "slug": "/list-all-pets",
+          "frontMatter": {},
+          "api": {
+            "operationId": "listPets",
+            "tags": [
+              "pets"
+            ],
+            "parameters": [
+              {
+                "name": "limit",
+                "in": "query",
+                "description": "How many items to return at one time (max 100)",
+                "required": false,
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "A paged array of pets",
+                "headers": {
+                  "x-next": {
+                    "description": "A link to the next page of responses",
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "name"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer",
+                            "format": "int64"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "tag": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "required": [
+                        "code",
+                        "message"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "description": "List all pets",
+            "method": "get",
+            "path": "/pets",
+            "servers": [
+              {
+                "url": "http://petstore.swagger.io/v1"
+              }
+            ],
+            "info": {
+              "version": "1.0.0",
+              "title": "Swagger Petstore",
+              "license": {
+                "name": "MIT"
+              }
+            },
+            "postman": {
+              "name": "List all pets",
+              "description": {
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "pets"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [
+                  {
+                    "description": {
+                      "content": "How many items to return at one time (max 100)",
+                      "type": "text/plain"
+                    },
+                    "key": "limit",
+                    "value": "<integer>"
+                  }
+                ],
+                "variable": []
+              },
+              "method": "GET"
+            }
+          },
+          "source": "@site/openapi.json",
+          "sourceDirName": ".",
+          "permalink": "/api/list-all-pets",
+          "next": {
+            "title": "Create a pet",
+            "permalink": "/api/create-a-pet"
+          }
+        },
+        {
+          "type": "api",
+          "id": "create-a-pet",
+          "unversionedId": "create-a-pet",
+          "title": "Create a pet",
+          "description": "",
+          "slug": "/create-a-pet",
+          "frontMatter": {},
+          "api": {
+            "operationId": "createPets",
+            "tags": [
+              "pets"
+            ],
+            "responses": {
+              "201": {
+                "description": "Null response"
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "required": [
+                        "code",
+                        "message"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "description": "Create a pet",
+            "method": "post",
+            "path": "/pets",
+            "parameters": [],
+            "servers": [
+              {
+                "url": "http://petstore.swagger.io/v1"
+              }
+            ],
+            "info": {
+              "version": "1.0.0",
+              "title": "Swagger Petstore",
+              "license": {
+                "name": "MIT"
+              }
+            },
+            "postman": {
+              "name": "Create a pet",
+              "description": {
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "pets"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "POST"
+            }
+          },
+          "source": "@site/openapi.json",
+          "sourceDirName": ".",
+          "permalink": "/api/create-a-pet",
+          "previous": {
+            "title": "List all pets",
+            "permalink": "/api/list-all-pets"
+          },
+          "next": {
+            "title": "Info for a specific pet",
+            "permalink": "/api/info-for-a-specific-pet"
+          }
+        },
+        {
+          "type": "api",
+          "id": "info-for-a-specific-pet",
+          "unversionedId": "info-for-a-specific-pet",
+          "title": "Info for a specific pet",
+          "description": "",
+          "slug": "/info-for-a-specific-pet",
+          "frontMatter": {},
+          "api": {
+            "operationId": "showPetById",
+            "tags": [
+              "pets"
+            ],
+            "parameters": [
+              {
+                "name": "petId",
+                "in": "path",
+                "required": true,
+                "description": "The id of the pet to retrieve",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            ],
+            "responses": {
+              "200": {
+                "description": "Expected response to a valid request",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "name"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "format": "int64"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "tag": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "default": {
+                "description": "unexpected error",
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "object",
+                      "required": [
+                        "code",
+                        "message"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "integer",
+                          "format": "int32"
+                        },
+                        "message": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "description": "Info for a specific pet",
+            "method": "get",
+            "path": "/pets/{petId}",
+            "servers": [
+              {
+                "url": "http://petstore.swagger.io/v1"
+              }
+            ],
+            "info": {
+              "version": "1.0.0",
+              "title": "Swagger Petstore",
+              "license": {
+                "name": "MIT"
+              }
+            },
+            "postman": {
+              "name": "Info for a specific pet",
+              "description": {
+                "type": "text/plain"
+              },
+              "url": {
+                "path": [
+                  "pets",
+                  ":petId"
+                ],
+                "host": [
+                  "{{baseUrl}}"
+                ],
+                "query": [],
+                "variable": [
+                  {
+                    "description": {
+                      "content": "(Required) The id of the pet to retrieve",
+                      "type": "text/plain"
+                    },
+                    "type": "any",
+                    "value": "<string>",
+                    "key": "petId"
+                  }
+                ]
+              },
+              "method": "GET"
+            }
+          },
+          "source": "@site/openapi.json",
+          "sourceDirName": ".",
+          "permalink": "/api/info-for-a-specific-pet",
+          "previous": {
+            "title": "Create a pet",
+            "permalink": "/api/create-a-pet"
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-proxy": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-theme-openapi": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

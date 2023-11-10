@@ -1,0 +1,23 @@
+{
+  "unversionedId": "API Integration/intro",
+  "id": "API Integration/intro",
+  "title": "Advanced API Integration with kick.com-api",
+  "description": "kick.com-api is a Node.js module that leverages Puppeteer for fetching channel data from Kick's API. This documentation delves into the advanced aspects of the KickApiWrapper class, illustrating its capabilities and handling.",
+  "source": "@site/docs/API Integration/intro.mdx",
+  "sourceDirName": "API Integration",
+  "slug": "/API Integration/intro",
+  "permalink": "/docs/API Integration/intro",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Advanced Integration Examples with kick.com-api",
+    "permalink": "/docs/API Integration/2examples"
+  },
+  "next": {
+    "title": "kick-fetch CLI Tool Documentation",
+    "permalink": "/docs/CLI Usage/intro"
+  }
+}
