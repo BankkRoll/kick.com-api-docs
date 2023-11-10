@@ -10,7 +10,7 @@ const config = {
   tagline: "An advanced kick.com API wrapper that allows via CLI or directly via API",
   url: "https://kickcom-api.com",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "BankkRoll",
