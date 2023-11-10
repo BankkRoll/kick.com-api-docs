@@ -1,0 +1,83 @@
+# Introduction
+
+The `kick-fetch` CLI tool provides a robust command-line interface for fetching data from the kick.com API, offering versatility in data retrieval, output formatting, and customization.
+
+## Installation
+
+Ensure you have `kick-fetch` installed globally on your system:
+
+```shell
+npm install -g kick.com-api
+```
+
+This installation allows you to use `kick-fetch` from any terminal window.
+
+## Basic Usage
+
+To fetch data for a specific channel, use the command followed by the username:
+
+```shell
+kick-fetch <username>
+```
+
+Replace `<username>` with the actual channel username.
+
+## Command Options
+
+`kick-fetch` offers several options to customize your data retrieval:
+
+- **API Version**: Specify the API version with `-v1` or `-v2`. Default is v2.
+  ```shell
+  kick-fetch <username> -v1
+  kick-fetch <username> -v2
+  ```
+- **Output Type**: Choose between JSON or plain text output with `-o` or `--output`.
+  ```shell
+  kick-fetch <username> -o json
+  kick-fetch <username> -o text
+  ```
+- **Save Output**: Save the output to a file using `-f` or `--file`.
+  ```shell
+  kick-fetch <username> -f path/to/output.json
+  ```
+- **Configuration File**: Use a custom configuration file with `-c` or `--config`.
+  ```shell
+  kick-fetch <username> -c path/to/config.json
+  ```
+- **Pretty Print**: Pretty print JSON output with `-p` or `--pretty`.
+  ```shell
+  kick-fetch <username> -p
+  ```
+
+## Advanced Usage
+
+To fetch specific fields, list them after the username:
+
+```shell
+kick-fetch <username> field1 field2 field3
+```
+
+You can combine this with other options for more tailored output.
+
+## Error Handling
+
+In case of an error, `kick-fetch` will provide a descriptive message to help identify the issue, ensuring smooth troubleshooting.
+
+## Examples
+
+Here are some examples of how you can use `kick-fetch`:
+
+- Fetch data with default settings:
+  ```shell
+  kick-fetch adinross
+  ```
+- Fetch data using API version 1 and save to a file:
+  ```shell
+  kick-fetch adinross -v1 -f user_data.json
+  ```
+- Fetch specific fields in pretty-printed JSON format:
+  ```shell
+  kick-fetch adinross id followers_count -o json -p
+  ```
+
+Explore these options to fully leverage the `kick-fetch` CLI tool in your data retrieval workflows.

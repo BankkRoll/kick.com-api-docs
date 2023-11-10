@@ -1,0 +1,84 @@
+# Introduction to kick.com-api
+
+`kick.com-api` is a Node.js module that leverages Puppeteer to fetch channel data from Kick's API efficiently. This documentation outlines the advanced aspects of the `KickApiWrapper` class, highlighting its capabilities and flexible usage in various scenarios.
+
+## Installation
+
+```shell
+npm install kick.com-api
+```
+
+Easily install `kick.com-api` into your Node.js project to start integrating live channel data.
+
+## Basic Usage
+
+### Simple Data Fetching
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper(); // Defaults to API version v2
+kickApi.fetchChannelData('username')
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+This example demonstrates fetching channel data using the default settings.
+
+### Fetching Specific Fields
+
+```javascript
+const kickApi = new KickApiWrapper('v2');
+kickApi.fetchChannelData('username', ['id', 'followers_count'])
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+Customize your data retrieval by specifying the fields you need.
+
+### Advanced Error Handling
+
+```javascript
+try {
+  // Logic to fetch data
+} catch (error) {
+  console.error(`Encountered an error: ${error}`);
+  // Implement more nuanced error handling
+} finally {
+  // Logic to execute regardless of try/catch outcome
+}
+```
+
+The module includes comprehensive error handling for robust application development.
+
+## Versatility in Use
+
+### Integration in Next.js API Routes
+
+```javascript
+// Example using KickApiWrapper in a Next.js API route
+import { KickApiWrapper } from 'kick.com-api';
+
+export default async function handler(req, res) {
+  const kickApi = new KickApiWrapper('v2');
+  // Fetch and return channel data
+}
+```
+
+### Node.js Server Implementation
+
+```javascript
+// Example in a Node.js server context
+const { KickApiWrapper } = require('kick.com-api');
+const express = require('express');
+const app = express();
+
+app.get('/channel/:id', async (req, res) => {
+  const kickApi = new KickApiWrapper();
+  // Fetch channel data and respond
+});
+```
+
+## Conclusion
+
+`kick.com-api` is tailored for easy integration into Node.js applications, offering customizable data fetching, comprehensive error handling, and compatibility with various Node.js frameworks and architectures. Whether you're building a simple script or a full-fledged server, `kick.com-api` enhances your project with its robust and reliable API integration capabilities.
