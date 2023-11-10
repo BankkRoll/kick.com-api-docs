@@ -10,7 +10,7 @@ const config = {
   tagline: "An advanced kick.com API wrapper that allows via CLI or directly via API",
   url: "https://kickcom-api.com",
   baseUrl: "/",
-  onBrokenLinks: "warn",
+  onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "BankkRoll",
@@ -19,6 +19,7 @@ const config = {
   presets: [
     [
       "docusaurus-preset-openapi",
+      /** @type {import('docusaurus-preset-openapi').Options} */
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
