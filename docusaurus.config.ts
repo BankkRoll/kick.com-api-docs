@@ -55,6 +55,11 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://www.npmjs.com/package/kick.com-api',
+          label: 'NPM',
+          position: 'right',
+        },
       ],
     },
     footer: {

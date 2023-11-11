@@ -4,48 +4,49 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Gif: React.ComponentType<React.ComponentProps<'img'>>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Seamless API Integration",
+    Gif: require("../../../static/img/api.gif").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        The kick.com-api module simplifies integrating streaming channel data into your React applications, 
+        offering a seamless connection to Kick's API for both v1 and v2 endpoints.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Full CLI Usability",
+    Gif: require("../../../static/img/cli.gif").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Beyond its integration into applications, kick.com-api is fully operable via CLI, 
+        offering command-line access to channel data. This feature caters to developers who prefer 
+        working directly in the terminal or scripting automated data retrieval.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Real-time Data Access",
+    Gif: require("../../../static/img/realtime.gif").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Access real-time streaming data with ease. Whether it's channel statistics or live status, 
+        kick.com-api provides up-to-date information at your fingertips.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Gif, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+      <img src={Gif} className={styles.featureGif} alt={title} style={{ borderRadius: '8px' }} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
