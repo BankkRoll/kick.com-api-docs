@@ -31,3 +31,16 @@
   border-radius: 5px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
+pre {
+  background-color: #282c34; /* Dark background */
+  color: #abb2bf; /* Light font color for contrast */
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto; /* For horizontal scrolling */
+}
+
+code {
+  font-family: 'Fira Code', monospace; /* Monospaced font for code */
+  font-size: 1em;
+}
