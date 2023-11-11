@@ -36,7 +36,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/logo.svg',
+    image: 'img/kick.gif',
     navbar: {
       title: "kick.com-api",
       logo: {
