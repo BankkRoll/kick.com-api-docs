@@ -18,8 +18,7 @@ const config = {
 
   presets: [
     [
-      "docusaurus-preset-openapi",
-      /** @type {import('docusaurus-preset-openapi').Options} */
+      '@docusaurus/preset-classic',
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
@@ -35,7 +34,6 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('docusaurus-preset-openapi').ThemeConfig} */
     ({
       navbar: {
         title: "kick.com-api",
