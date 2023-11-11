@@ -41,7 +41,7 @@ const config: Config = {
       title: "kick.com-api",
       logo: {
         alt: 'kick.com-api',
-        src: 'img/logo.svg',
+        src: 'img/kick.gif',
       },
       items: [
         {

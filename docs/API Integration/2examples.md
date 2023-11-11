@@ -1,8 +1,9 @@
-# Examples of Integrating kick.com-api
+# Examples
 
-## Node.js Integration
+Here are some examples of how you can use `kick.com-api`:
 
-### 1. Basic Integration and Error Handling
+
+### Basic Integration and Error Handling
 
 ```javascript
 const { KickApiWrapper } = require('kick.com-api');
@@ -26,27 +27,134 @@ async function fetchChannelInfo(channelName) {
 fetchChannelInfo('exampleChannel');
 ```
 
-### 2. Complex Data Processing
+### Fetching Leaderboards
 
 ```javascript
-const { KickApiWrapper } = require('kick.com-api');
-const fs = require('fs');
 
-async function processChannelData(channelName) {
+const { KickApiWrapper } = require('kick.com-api');
+
+async function fetchLeaderboards(channelName) {
   const kickApi = new KickApiWrapper();
   try {
-    const data = await kickApi.fetchChannelData(channelName);
-    // Perform complex data processing here
-    fs.writeFileSync(`./data/${channelName}.json`, JSON.stringify(data));
+    const leaderboards = await kickApi.fetchLeaderboards(channelName);
+    console.log(leaderboards);
   } catch (error) {
-    console.error('Error processing channel data:', error);
+    console.error('Error fetching leaderboards:', error);
   }
 }
 
-processChannelData('exampleChannel');
+fetchLeaderboards('exampleChannel');
 ```
 
-### 3. Scheduling Regular Data Fetches (Cron Jobs)
+### Fetching Live Stream Details
+
+```javascript
+const { KickApiWrapper } = require('kick.com-api');
+
+async function fetchLiveStreamDetails(channelName) {
+  const kickApi = new KickApiWrapper();
+  try {
+    const liveStreamDetails = await kickApi.fetchLiveStreamDetails(channelName);
+    console.log(liveStreamDetails);
+  } catch (error) {
+    console.error('Error fetching live stream details:', error);
+  }
+}
+
+fetchLiveStreamDetails('exampleChannel');
+```
+
+### Fetching Chatroom Settings
+
+```javascript
+const { KickApiWrapper } = require('kick.com-api');
+
+async function fetchChatroomSettings(channelName) {
+  const kickApi = new KickApiWrapper();
+  try {
+    const chatroomSettings = await kickApi.fetchChatroomSettings(channelName);
+    console.log(chatroomSettings);
+  } catch (error) {
+    console.error('Error fetching chatroom settings:', error);
+  }
+}
+
+fetchChatroomSettings('exampleChannel');
+```
+
+### Fetching Categories
+
+```javascript
+const { KickApiWrapper } = require('kick.com-api');
+
+async function fetchCategories() {
+  const kickApi = new KickApiWrapper();
+  try {
+    const categories = await kickApi.fetchCategories();
+    console.log(categories);
+  } catch (error) {
+    console.error('Error fetching categories:', error);
+  }
+}
+
+fetchCategories();
+```
+
+### Fetching Subcategories
+
+```javascript
+const { KickApiWrapper } = require('kick.com-api');
+
+async function fetchSubcategories() {
+  const kickApi = new KickApiWrapper();
+  try {
+    const subcategories = await kickApi.fetchSubcategories();
+    console.log(subcategories);
+  } catch (error) {
+    console.error('Error fetching subcategories:', error);
+  }
+}
+
+fetchSubcategories();
+```
+
+### Fetching Top Categories
+
+```javascript
+const { KickApiWrapper } = require('kick.com-api');
+
+async function fetchTopCategories() {
+  const kickApi = new KickApiWrapper();
+  try {
+    const topCategories = await kickApi.fetchTopCategories();
+    console.log(topCategories);
+  } catch (error) {
+    console.error('Error fetching top categories:', error);
+  }
+}
+
+fetchTopCategories();
+```
+
+### Fetching Featured Livestreams
+
+```javascript
+const { KickApiWrapper } = require('kick.com-api');
+
+async function fetchFeaturedLivestreams(region) {
+  const kickApi = new KickApiWrapper();
+  try {
+    const featuredLivestreams = await kickApi.fetchFeaturedLivestreams(region);
+    console.log(featuredLivestreams);
+  } catch (error) {
+    console.error('Error fetching featured livestreams:', error);
+  }
+}
+
+fetchFeaturedLivestreams('en');
+```
+
+### Scheduling (Cron Jobs)
 
 ```javascript
 const cron = require('node-cron');
@@ -63,9 +171,7 @@ cron.schedule('* * * * *', async () => {
 });
 ```
 
-## Express.js Integration
-
-### 4. Express.js Route Integration
+### Express.js Route
 
 ```javascript
 const express = require('express');
@@ -86,9 +192,7 @@ app.get('/channel/:name', async (req, res) => {
 app.listen(port, () => console.log(`Server running on port ${port}`));
 ```
 
-## Next.js Integration
-
-### 5. Next.js API Route - Pages Router
+### Next.js API Route - Pages Router
 
 ```javascript
 import { KickApiWrapper } from 'kick.com-api';
@@ -106,7 +210,7 @@ export default async function handler(req, res) {
 }
 ```
 
-### 6. Next.js API Route - App Router
+### Next.js API Route - App Router
 
 ```javascript
 import { KickApiWrapper } from 'kick.com-api';
@@ -130,9 +234,7 @@ export async function GET(request) {
 }
 ```
 
-## Frontend Framework Integration
-
-### 7. Integration in a React Component (JavaScript)
+### React Component (JavaScript)
 
 ```javascript
 import React, { useState, useEffect } from 'react';
@@ -156,7 +258,7 @@ function ChannelInfo({ channelName }) {
 }
 ```
 
-### 8. Integration in a React Component (TypeScript)
+### React Component (TypeScript)
 
 ```typescript
 import { KickApiWrapper } from 'kick.com-api';
@@ -173,4 +275,3 @@ async function fetchChannelInfo(channelName: string): Promise<any> {
 
 fetchChannelInfo('exampleChannel');
 ```
-

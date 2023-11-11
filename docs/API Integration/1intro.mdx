@@ -1,6 +1,6 @@
-# Introduction to kick.com-api
+# Introduction
 
-`kick.com-api` is a Node.js module that leverages Puppeteer to fetch channel data from Kick's API efficiently. This documentation outlines the advanced aspects of the `KickApiWrapper` class, highlighting its capabilities and flexible usage in various scenarios.
+kick.com-api is a Node.js module that leverages Puppeteer to interact with Kick's API efficiently. This documentation outlines the advanced aspects of the `KickApiWrapper` class, highlighting its capabilities and flexible usage in various scenarios.
 
 ## Installation
 
@@ -23,11 +23,25 @@ kickApi.fetchChannelData('username')
   .catch(error => console.error(error));
 ```
 
-This example demonstrates fetching channel data using the default settings.
+## Custom User Agent
+
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper({
+  userAgent: 'Your Custom User Agent'
+});
+kickApi.fetchChannelData('username')
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
 
 ### Fetching Specific Fields
 
 ```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
 const kickApi = new KickApiWrapper('v2');
 kickApi.fetchChannelData('username', ['id', 'followers_count'])
   .then(data => console.log(data))
@@ -49,33 +63,139 @@ try {
 }
 ```
 
-The module includes comprehensive error handling for robust application development.
+## Advanced Usage
+
+### Fetching Leaderboards
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper();
+kickApi.fetchLeaderboards('username')
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+### Fetching Live Stream Details
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper();
+kickApi.fetchLiveStreamDetails('username')
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+### Fetching Chatroom Settings
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper();
+kickApi.fetchChatroomSettings('username')
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+### Fetching Categories
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper();
+kickApi.fetchCategories(['field1', 'field2'])
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+### Fetching Subcategories
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper();
+kickApi.fetchSubcategories(['field1', 'field2'])
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+### Fetching Top Categories
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper();
+kickApi.fetchTopCategories(['field1', 'field2'])
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+### Fetching Featured Livestreams
+
+```javascript
+import { KickApiWrapper } from 'kick.com-api';
+
+const kickApi = new KickApiWrapper();
+kickApi.fetchFeaturedLivestreams('en', ['field1', 'field2'])
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+```
+
+Each method provides flexibility and extensive functionality for fetching specific types of data.
 
 ## Versatility in Use
 
 ### Integration in Next.js API Routes
 
 ```javascript
-// Example using KickApiWrapper in a Next.js API route
 import { KickApiWrapper } from 'kick.com-api';
 
 export default async function handler(req, res) {
-  const kickApi = new KickApiWrapper('v2');
-  // Fetch and return channel data
+  const kickApi = new KickApiWrapper(); // Defaults to V2
+  try {
+    const channelData = await kickApi.fetchChannelData(req.query.channelName);
+    res.status(200).json(channelData);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
 ```
 
 ### Node.js Server Implementation
 
 ```javascript
-// Example in a Node.js server context
 const { KickApiWrapper } = require('kick.com-api');
 const express = require('express');
 const app = express();
 
 app.get('/channel/:id', async (req, res) => {
+  const kickApi = new KickApiWrapper(); // Defaults to V2
+  try {
+    const channelData = await kickApi.fetchChannelData(req.params.id);
+    res.json(channelData);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
+app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+```
+
+### Scheduling (Cron Jobs)
+
+```javascript
+const cron = require('node-cron');
+const { KickApiWrapper } = require('kick.com-api');
+
+cron.schedule('0 * * * *', async () => { // Run every hour at minute 0
   const kickApi = new KickApiWrapper();
-  // Fetch channel data and respond
+  try {
+    const data = await kickApi.fetchChannelData('liveChannel');
+    console.log('Fetched data:', data);
+  } catch (error) {
+    console.error('Error on scheduled fetch:', error);
+  }
 });
 ```
 

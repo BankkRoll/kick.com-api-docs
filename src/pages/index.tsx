@@ -8,18 +8,19 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-        <h1 className="hero__title">npm i {siteConfig.title}</h1>
+          <h1 className="hero__title">npm i {siteConfig.title}</h1>
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/docs/intro"
+          >
             Explore Features ➤
           </Link>
         </div>
@@ -29,14 +30,15 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Description will go into a meta tag in <head />"
+    >
       <HomepageHeader />
       <main>
-      <div className={styles.buttons}>
+        <div className={styles.buttons}>
           <a
             className="button button--secondary button--lg"
             href="https://www.npmjs.com/package/kick.com-api"
@@ -52,6 +54,18 @@ export default function Home(): JSX.Element {
             rel="noopener noreferrer"
           >
             GitHub Repository
+          </a>
+        </div>
+        <div className={styles.buttons}>
+          <a
+            href="https://www.npmjs.com/package/kick.com-api"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://img.shields.io/npm/v/kick.com-api.svg"
+              alt="npm version"
+            />
           </a>
         </div>
         <HomepageFeatures />

@@ -33,15 +33,4 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.code-container {
-  position: relative;
-  background-color: #282c34;
-  border-radius: 5px;
-  padding: 1em;
-}
-
-pre {
-  color: #abb2bf;
-  overflow-x: auto;
-}
 
